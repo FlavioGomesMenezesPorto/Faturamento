@@ -29,7 +29,12 @@ public class FaturaDAO extends MysqlDAO {
         try (ResultSet rs = super.executar(sql)) {
             while (rs.next()) {
                 Fatura fatura = new Fatura();
-                fatura.preencher(rs);
+                fatura.setIdFatura(rs.getInt("id"));
+                fatura.setIdCliente(rs.getInt("id_cliente"));
+                fatura.setDescricao(rs.getString("descricao"));
+                fatura.setValor(rs.getDouble("valor"));
+                fatura.setDataVencimento(rs.getString("data_vencimento"));
+                fatura.setStatus(rs.getString("status"));
                 faturas.add(fatura);
             }
         } catch (SQLException e) {
@@ -44,7 +49,12 @@ public class FaturaDAO extends MysqlDAO {
         try (ResultSet rs = super.executar(sql, idCliente)) {
             while (rs.next()) {
                 Fatura fatura = new Fatura();
-                fatura.preencher(rs);
+                fatura.setIdFatura(rs.getInt("id"));
+                fatura.setIdCliente(rs.getInt("id_cliente"));
+                fatura.setDescricao(rs.getString("descricao"));
+                fatura.setValor(rs.getDouble("valor"));
+                fatura.setDataVencimento(rs.getString("data_vencimento"));
+                fatura.setStatus(rs.getString("status"));
                 faturas.add(fatura);
             }
         } catch (SQLException e) {

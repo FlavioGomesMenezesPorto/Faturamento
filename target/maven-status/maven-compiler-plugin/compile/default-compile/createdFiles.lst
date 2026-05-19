@@ -1,12 +1,12 @@
 service\ClienteService.class
 service\UsuarioService.class
 Config\AuthFilter.class
-model\Mapeavel.class
 model\Cliente.class
-service\FaturaService.class
-Config\MySqlSingleton.class
 dao\ClienteDAO.class
 dao\MysqlDAO.class
-dao\UsuarioDAO.class
+Config\MySqlSingleton.class
 Controller\FaturaController.class
 model\Usuario.class
+model\Mapeavel.class
+service\FaturaService.class
+dao\UsuarioDAO.class
